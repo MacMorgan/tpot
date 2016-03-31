@@ -125,7 +125,7 @@ class TPOT(object):
         self._pset.addPrimitive(self._random_forest, [pd.DataFrame, int], pd.DataFrame)
         self._pset.addPrimitive(self._logistic_regression, [pd.DataFrame, float], pd.DataFrame)
         # Temporarily remove SVC -- badly overfits on multiclass data sets
-        #self._pset.addPrimitive(self._svc, [pd.DataFrame, float], pd.DataFrame)
+        self._pset.addPrimitive(self._svc, [pd.DataFrame, float], pd.DataFrame)
         self._pset.addPrimitive(self._knnc, [pd.DataFrame, int], pd.DataFrame)
         self._pset.addPrimitive(self._xgradient_boosting, [pd.DataFrame, float, int, int], pd.DataFrame)
 
